@@ -70,6 +70,12 @@ end
 exit
 wr
 
+conf t
+#### router ospf 1
+network 192.168.4.1 0.0.0.0 area 0
+network 192.168.5.1 0.0.0.0 area 0
+end
+
 
 ### FNL-BORDER01
 enable
@@ -110,7 +116,12 @@ neighbor 192.168.3.1 remote-as 65100
 redistribute connected
 end
 wr
-exit
+
+conf t
+#### router ospf 1
+network 192.168.6.1 0.0.0.0 area 0
+network 192.168.7.1 0.0.0.0 area 0
+end
 
 ### PAE-DIST01
 enable
@@ -132,6 +143,12 @@ no shut
 exit
 
 
+#### router ospf 1
+network 192.168.4.2 0.0.0.0 area 0
+network 192.168.8.1 0.0.0.0 area 0
+end
+
+
 ### PAE-DIST02
 enable
 conf t
@@ -151,6 +168,10 @@ ip addr 192.168.8.2 255.255.255.252
 no shut
 exit
 
+#### router ospf 1
+network 192.168.8.2 0.0.0.0 area 0
+network 192.168.5.2 0.0.0.0 area 0
+end
 exit
 wr
 
