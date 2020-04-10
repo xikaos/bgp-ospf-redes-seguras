@@ -126,12 +126,10 @@ ip addr 192.168.4.2 255.255.255.252
 no shut
 exit
 
-#### int e1/0
+#### int e0/3
 ip addr 192.168.8.1 255.255.255.252
 no shut
 exit
-
-
 
 
 ### PAE-DIST02
@@ -141,4 +139,19 @@ hostname PAE-DIST02
 no ip domain-lookup
 exit
 wr
+
+conf t
+#### int e1/0
+ip addr 192.168.5.2 255.255.255.252
+no shut
+exit
+
+#### int e0/3
+ip addr 192.168.8.2 255.255.255.252
+no shut
+exit
+
+exit
+wr
+
 
