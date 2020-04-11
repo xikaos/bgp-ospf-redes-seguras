@@ -66,16 +66,18 @@ conf t
 neighbor 192.168.1.1 remote-as 65300
 neighbor 192.168.3.2 remote-as 65100
 redistribute connected
+bgp redistribute-internal
 end
-exit
 wr
 
 conf t
 #### router ospf 1
 network 192.168.4.1 0.0.0.0 area 0
 network 192.168.5.1 0.0.0.0 area 0
+redistribute connected
+redistribute bgp 65100 subnets
 end
-
+wr
 
 ### FNL-BORDER01
 enable
@@ -114,6 +116,7 @@ conf t
 neighbor 192.168.2.1 remote-as 65300
 neighbor 192.168.3.1 remote-as 65100
 redistribute connected
+bgp redistribute-internal
 end
 wr
 
@@ -121,7 +124,10 @@ conf t
 #### router ospf 1
 network 192.168.6.1 0.0.0.0 area 0
 network 192.168.7.1 0.0.0.0 area 0
+redistribute bgp 65100 subnets
 end
+wr
+
 
 ### PAE-DIST01
 enable
@@ -147,6 +153,8 @@ exit
 network 192.168.4.2 0.0.0.0 area 0
 network 192.168.8.1 0.0.0.0 area 0
 end
+
+wr
 
 
 ### PAE-DIST02
