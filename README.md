@@ -235,3 +235,162 @@ network 192.168.7.2 0.0.0.0 area 0
 end
 exit
 wr
+
+### CSL-ACESSO01
+enable
+conf t
+hostname CSL-ACCESSO01
+no ip domain-lookup
+exit
+wr
+
+conf t
+#### int e0/0
+ip addr 192.168.10.2 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.13.2 255.255.255.252
+no shut
+exit
+
+
+### SMA-ACESSO01
+enable
+conf t
+hostname SMA-ACCESSO01
+no ip domain-lookup
+exit
+wr
+
+conf t
+#### int e0/0
+ip addr 192.168.11.2 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.14.2 255.255.255.252
+no shut
+exit
+
+### PAE-ACESSO01
+enable
+conf t
+hostname PAE-ACCESSO01
+no ip domain-lookup
+exit
+wr
+
+conf t
+#### int e0/0
+ip addr 192.168.12.2 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.15.2 255.255.255.252
+no shut
+exit
+
+### FNL-ACESSO01
+enable
+conf t
+hostname FNL-ACCESSO01
+no ip domain-lookup
+exit
+wr
+
+conf t
+#### int e0/0
+ip addr 192.168.16.2 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.21.2 255.255.255.252
+no shut
+exit
+
+### BNU-ACESSO01
+enable
+conf t
+hostname BNU-ACCESSO01
+no ip domain-lookup
+exit
+wr
+
+conf t
+#### int e0/0
+ip addr 192.168.17.2 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.22.2 255.255.255.252
+no shut
+exit
+
+
+### XAP-ACESSO01
+enable
+conf t
+hostname XAP-ACCESSO01
+no ip domain-lookup
+exit
+wr
+
+conf t
+#### int e0/0
+ip addr 192.168.18.2 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.23.2 255.255.255.252
+no shut
+exit
+
+### CCM-ACESSO01
+enable
+conf t
+hostname CCM-ACCESSO01
+no ip domain-lookup
+exit
+wr
+
+conf t
+#### int e0/0
+ip addr 192.168.19.2 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.23.2 255.255.255.252
+no shut
+exit
+
+### JOI-ACESSO01
+enable
+conf t
+hostname JOI-ACCESSO01
+no ip domain-lookup
+exit
+wr
+
+conf t
+#### int e0/0
+ip addr 192.168.20.2 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.24.2 255.255.255.252
+no shut
+exit
+
+
+
+
+
