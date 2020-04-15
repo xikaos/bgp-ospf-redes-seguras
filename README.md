@@ -149,6 +149,20 @@ ip addr 192.168.8.1 255.255.255.252
 no shut
 exit
 
+#### int e0/0
+ip addr 192.168.10.1 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.11.1 255.255.255.252
+no shut
+exit
+
+#### int e0/2
+ip addr 192.168.12.1 255.255.255.252
+no shut
+exit
 
 #### router ospf 1
 network 192.168.4.2 0.0.0.0 area 0
@@ -174,6 +188,21 @@ exit
 
 #### int e0/3
 ip addr 192.168.8.2 255.255.255.252
+no shut
+exit
+
+#### int e0/0
+ip addr 192.168.13.1 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.14.1 255.255.255.252
+no shut
+exit
+
+#### int e0/2
+ip addr 192.168.15.1 255.255.255.252
 no shut
 exit
 
@@ -203,6 +232,32 @@ ip addr 192.168.6.2 255.255.255.252
 no shut
 exit
 
+#### int e0/0
+ip addr 192.168.16.1 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.17.1 255.255.255.252
+no shut
+exit
+
+#### int e0/2
+ip addr 192.168.18.1 255.255.255.252
+no shut
+exit
+
+#### int e0/3
+ip addr 192.168.19.1 255.255.255.252
+no shut
+exit
+
+#### int e1/2
+ip addr 192.168.20.1 255.255.255.252
+no shut
+exit
+
+
 #### router ospf 1
 network 192.168.9.1 0.0.0.0 area 0
 network 192.168.6.2 0.0.0.0 area 0
@@ -226,6 +281,31 @@ exit
 
 #### int e1/1
 ip addr 192.168.7.2 255.255.255.252
+no shut
+exit
+
+#### int e0/0
+ip addr 192.168.21.1 255.255.255.252
+no shut
+exit
+
+#### int e0/1
+ip addr 192.168.22.1 255.255.255.252
+no shut
+exit
+
+#### int e0/2
+ip addr 192.168.23.1 255.255.255.252
+no shut
+exit
+
+#### int e0/3
+ip addr 192.168.23.1 255.255.255.252
+no shut
+exit
+
+#### int e1/2
+ip addr 192.168.24.1 255.255.255.252
 no shut
 exit
 
@@ -389,8 +469,4 @@ exit
 ip addr 192.168.24.2 255.255.255.252
 no shut
 exit
-
-
-
-
 
