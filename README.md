@@ -335,6 +335,13 @@ ip addr 192.168.13.2 255.255.255.252
 no shut
 exit
 
+#### router ospf 1
+network 192.168.10.2 0.0.0.0 area 10
+network 192.168.13.2 0.0.0.0 area 10
+end
+wr
+
+
 
 ### SMA-ACESSO01
 enable
@@ -355,6 +362,12 @@ ip addr 192.168.14.2 255.255.255.252
 no shut
 exit
 
+#### router ospf 1
+network 192.168.11.2 0.0.0.0 area 11
+network 192.168.14.2 0.0.0.0 area 11
+end
+wr
+
 ### PAE-ACESSO01
 enable
 conf t
@@ -373,6 +386,13 @@ exit
 ip addr 192.168.15.2 255.255.255.252
 no shut
 exit
+
+#### router ospf 1
+
+network 192.168.12.2 0.0.0.0 area 12  
+network 192.168.15.2 0.0.0.0 area 12  
+end  
+wr
 
 ### FNL-ACESSO01
 enable
@@ -393,6 +413,13 @@ ip addr 192.168.21.2 255.255.255.252
 no shut
 exit
 
+#### router ospf 1
+
+network 192.168.16.2 0.0.0.0 area 16 
+network 192.168.21.2 0.0.0.0 area 16  
+end  
+wr
+
 ### BNU-ACESSO01
 enable
 conf t
@@ -412,6 +439,12 @@ ip addr 192.168.22.2 255.255.255.252
 no shut
 exit
 
+#### router ospf 1
+
+network 192.168.17.2 0.0.0.0 area 17
+network 192.168.22.2 0.0.0.0 area 17  
+end  
+wr
 
 ### XAP-ACESSO01
 enable
@@ -432,6 +465,15 @@ ip addr 192.168.23.2 255.255.255.252
 no shut
 exit
 
+#### router ospf 1
+
+network 192.168.18.2 0.0.0.0 area 18
+network 192.168.23.2 0.0.0.0 area 18  
+end  
+wr
+
+
+
 ### CCM-ACESSO01
 enable
 conf t
@@ -451,6 +493,14 @@ ip addr 192.168.23.2 255.255.255.252
 no shut
 exit
 
+#### router ospf 1
+
+network 192.168.19.2 0.0.0.0 area 19
+network 192.168.23.2 0.0.0.0 area 19  
+end  
+wr
+
+
 ### JOI-ACESSO01
 enable
 conf t
@@ -469,4 +519,14 @@ exit
 ip addr 192.168.24.2 255.255.255.252
 no shut
 exit
+
+#### router ospf 1
+
+network 192.168.20.2 0.0.0.0 area 20
+network 192.168.24.2 0.0.0.0 area 20  
+end  
+wr
+
+
+
 
