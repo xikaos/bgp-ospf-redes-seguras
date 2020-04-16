@@ -167,6 +167,9 @@ exit
 #### router ospf 1
 network 192.168.4.2 0.0.0.0 area 0
 network 192.168.8.1 0.0.0.0 area 0
+network 192.168.10.1 0.0.0.0 area 10
+network 192.168.11.1 0.0.0.0 area 11
+network 192.168.12.1 0.0.0.0 area 12
 end
 
 wr
@@ -209,6 +212,9 @@ exit
 #### router ospf 1
 network 192.168.8.2 0.0.0.0 area 0
 network 192.168.5.2 0.0.0.0 area 0
+network 192.168.13.1 0.0.0.0 area 10
+network 192.168.14.1 0.0.0.0 area 11
+network 192.168.15.1 0.0.0.0 area 12
 end
 exit
 wr
@@ -261,6 +267,11 @@ exit
 #### router ospf 1
 network 192.168.9.1 0.0.0.0 area 0
 network 192.168.6.2 0.0.0.0 area 0
+network 192.168.16.1 0.0.0.0 area 16
+network 192.168.17.1 0.0.0.0 area 17
+network 192.168.18.1 0.0.0.0 area 18
+network 192.168.19.1 0.0.0.0 area 19
+network 192.168.20.1 0.0.0.0 area 20
 end
 exit
 wr
@@ -300,18 +311,23 @@ no shut
 exit
 
 #### int e0/3
-ip addr 192.168.23.1 255.255.255.252
+ip addr 192.168.24.1 255.255.255.252
 no shut
 exit
 
 #### int e1/2
-ip addr 192.168.24.1 255.255.255.252
+ip addr 192.168.25.1 255.255.255.252
 no shut
 exit
 
 #### router ospf 1
 network 192.168.9.2 0.0.0.0 area 0
 network 192.168.7.2 0.0.0.0 area 0
+network 192.168.21.1 0.0.0.0 area 16
+network 192.168.22.1 0.0.0.0 area 17
+network 192.168.23.1 0.0.0.0 area 18
+network 192.168.24.1 0.0.0.0 area 19
+network 192.168.25.1 0.0.0.0 area 20
 end
 exit
 wr
@@ -489,14 +505,14 @@ no shut
 exit
 
 #### int e0/1
-ip addr 192.168.23.2 255.255.255.252
+ip addr 192.168.24.2 255.255.255.252
 no shut
 exit
 
 #### router ospf 1
 
 network 192.168.19.2 0.0.0.0 area 19
-network 192.168.23.2 0.0.0.0 area 19  
+network 192.168.24.2 0.0.0.0 area 19
 end  
 wr
 
@@ -516,17 +532,13 @@ no shut
 exit
 
 #### int e0/1
-ip addr 192.168.24.2 255.255.255.252
+ip addr 192.168.25.2 255.255.255.252
 no shut
 exit
 
 #### router ospf 1
 
 network 192.168.20.2 0.0.0.0 area 20
-network 192.168.24.2 0.0.0.0 area 20  
+network 192.168.25.2 0.0.0.0 area 20  
 end  
 wr
-
-
-
-
