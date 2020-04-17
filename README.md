@@ -51,6 +51,8 @@ exit
 
 #### int e0/2
 ip addr 192.168.3.1 255.255.255.252
+ip ospf network point-to-point
+ip ospf 1 area 0
 no shut
 exit
 
@@ -66,6 +68,7 @@ conf t
 neighbor 192.168.1.1 remote-as 65300
 neighbor 192.168.3.2 remote-as 65100
 redistribute connected
+redistribute ospf 1
 bgp redistribute-internal
 end
 wr
@@ -100,6 +103,8 @@ exit
 
 #### int e0/2
 ip addr 192.168.3.2 255.255.255.252
+ip ospf network point-to-point
+ip ospf 1 area 0
 no shut
 exit
 
@@ -116,6 +121,7 @@ conf t
 neighbor 192.168.2.1 remote-as 65300
 neighbor 192.168.3.1 remote-as 65100
 redistribute connected
+redistribute ospf 1
 bgp redistribute-internal
 end
 wr
