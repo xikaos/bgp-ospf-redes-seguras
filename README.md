@@ -2,10 +2,15 @@
 ## ISP
 ### AS65300-B0
 enable
+
 conf t
+
 hostname AS65300-B0
+
 no ip domain-lookup
+
 exit
+
 wr
 
 conf t
