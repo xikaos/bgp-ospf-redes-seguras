@@ -564,3 +564,15 @@ network 192.168.25.2 0.0.0.0 area 20
 end  
 wr
 exit
+
+### PFSense
+1. Subir appliance dentro do lab.
+2. Configurar interface LAN para `vtnet0`.
+3. Conectar a network `Management` em e0/0.
+4. Configurar o IP da interface `vtnet0` dentro do range da VM do Eve.
+5. Fazer login na VM do Eve.
+6. Tunelar a conexão entre a VM do Eve e o host pelo comando `ssh -L ip_maquina_eve:3000:ip_maquina_pfsense:80 root@ip_maquina_eve`. 
+7. Testar o acesso. É necessário obter um erro relativo a verificação do cabeçalho `Referer` do HTTP.
+8. Acesse o shell da máquina do PFSense selecionando a opção 8 via console.
+9. Execute o comando para desabilitar a verficação do cabeçalho HTTP: `pfSsh.php playback disablereferercheck`
+10. Acesse a interface web e configure o firewall
